@@ -4,7 +4,7 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.example</groupId>
-	<artifactId>chap08</artifactId>
+	<artifactId>chap07</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
@@ -35,9 +35,50 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
-	</dependencies>
-
-	<build>
+		
+		<!-- 1. JSP precompiler -->
+		<dependency>
+		    <groupId>org.apache.tomcat.embed</groupId>
+		    <artifactId>tomcat-embed-jasper</artifactId>
+		</dependency>
+		
+		<!-- 2. Cool swapping & Livereload(f5 자동기능) -->
+		<dependency>
+		    <groupId>org.springframework.boot</groupId>
+		    <artifactId>spring-boot-devtools</artifactId>	   
+		</dependency>
+		
+		<!-- 3.BootStrap  -->
+		<dependency>
+		    <groupId>org.webjars</groupId>
+		    <artifactId>bootstrap</artifactId>
+		    <version>3.3.7-1</version>
+		</dependency>
+		
+		<!-- 4. Animate  -->
+	    <dependency>
+	    <groupId>org.webjars</groupId>
+	    <artifactId>animate.css</artifactId>
+	    <version>3.5.2</version>
+		</dependency>
+		
+		<!-- 5.JSTL (Standard Tag Library -->
+		<dependency>
+	    <groupId>javax.servlet</groupId>
+	    <artifactId>jstl</artifactId>	    
+		</dependency>	
+		
+		<!-- 6. (Autentication(인증) & Autorization(권한)-->
+		<dependency>
+	    <groupId>org.springframework.boot</groupId>
+	    <artifactId>spring-boot-starter-security</artifactId>
+	    <version>1.5.1.RELEASE</version>
+		</dependency>
+		
+					
+		</dependencies>
+	
+		<build>
 		<plugins>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
@@ -45,6 +86,5 @@
 			</plugin>
 		</plugins>
 	</build>
-
 
 </project>
